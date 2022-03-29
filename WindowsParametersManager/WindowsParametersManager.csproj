@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>ParametersManager</RootNamespace>
+        <TargetFramework>net6.0-windows</TargetFramework>
+    </PropertyGroup>
+
+    <Import Project="$(MSBuildProjectDirectory)..\..\Common.props" Label="Правила и nuget-пакет StyleCop, GlobalAssemblyInfo" />
+
+</Project>
