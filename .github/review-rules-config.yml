@@ -7,9 +7,8 @@ addAssignees: true
 numberOfAssignees: 1
 assignees:
  - Vanomaster
-# - author
+ - author
 
-#skipKeywords:
-#  - wip
-#  - draft
-#
+skipKeywords:
+  - wip
+  - draft
