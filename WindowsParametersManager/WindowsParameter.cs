@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using System.Diagnostics;
+using Microsoft.Win32;
 
 namespace ParametersManager;
 
@@ -108,10 +109,12 @@ public class WindowsParameter : SimpleWindowsParameter
             throw new ArgumentException("An empty new value was passed!");
         }
 
-        var key = Registry.CurrentUser.OpenSubKey(Path!, true);
+        var key = RegistryKey.OpenBaseKey(RegistryHive.CurrentUser, RegistryView.Default)
+            .OpenSubKey(Path!, true);
         key?.SetValue(Name, newValue);
 
         GetRegistryValue();
+        UpdateGroupPolicy();
     }
 
     /// <summary>
@@ -133,10 +136,31 @@ public class WindowsParameter : SimpleWindowsParameter
             throw new ArgumentException("An empty path to additions was passed!");
         }
 
-        var key = Registry.CurrentUser.OpenSubKey(additionsPath, true);
+        var key = RegistryKey.OpenBaseKey(RegistryHive.CurrentUser, RegistryView.Default)
+            .OpenSubKey(additionsPath, true);
         additions.ForEach(parameter => key?.SetValue(parameter.Name, parameter.Value!));
 
         GetRegistryAdditions(additionsPath);
+        UpdateGroupPolicy();
+    }
+
+    /// <summary>
+    /// Update group policy.
+    /// </summary>
+    private static void UpdateGroupPolicy()
+    {
+        var executableFile = new FileInfo(@"gpupdate.exe");
+        var process = new Process
+        {
+            StartInfo =
+            {
+                WindowStyle = ProcessWindowStyle.Hidden,
+                FileName = executableFile.Name,
+                Arguments = "/force",
+            },
+        };
+
+        process.Start();
     }
 
     /// <summary>
