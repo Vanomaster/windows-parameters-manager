@@ -1,8 +1,10 @@
 addReviewers: true
+numberOfReviewers: 1
 reviewers:
  - Vanomaster
  
 addAssignees: true
+numberOfAssignees: 1
 assignees:
  - Vanomaster
  - author
