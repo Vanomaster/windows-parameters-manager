@@ -1,7 +1,8 @@
 addReviewers: true
 reviewers:
  - Vanomaster
-
+ 
+addAssignees: author
 addAssignees: true
 assignees:
  - Vanomaster
