@@ -2,10 +2,10 @@ addReviewers: true
 reviewers:
  - Vanomaster
  
-addAssignees: author
 addAssignees: true
 assignees:
  - Vanomaster
+ - author
 
 skipKeywords:
   - wip
