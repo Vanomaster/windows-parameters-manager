@@ -1,0 +1,13 @@
+addReviewers: true
+numberOfReviewers: 1
+reviewers:
+ - Vanomaster
+
+addAssignees: true
+assignees:
+ - Vanomaster
+numberOfAssignees: 1
+
+skipKeywords:
+  - wip
+  - draft
