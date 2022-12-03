@@ -1,4 +1,4 @@
-name: Auto set reviewers and assignees
+name: Review rules
 
 on:
   pull_request:
