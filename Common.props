@@ -12,7 +12,7 @@
         -->
         <NoWarn>SA1633,SA1314,SA1623,SA1642,SA1101,SA1204</NoWarn>
         <MSBuildWarningsAsMessages>NU1701</MSBuildWarningsAsMessages>
-    </PropertyGroup>
+    </PropertyGroup>//Test
     
     <ItemGroup Label="Общий для всех проектов пакет StyleCop + GAI">
         
