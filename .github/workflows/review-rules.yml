@@ -11,4 +11,4 @@ jobs:
       - uses: hkusu/review-assign-action@v1.3.0
         with:
           assignees: ${{ github.Vanomaster }}
-          reviewers: ${{ github.Vanomaster }}
+          reviewers: github.Vanomaster
