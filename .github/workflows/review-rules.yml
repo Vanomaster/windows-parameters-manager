@@ -8,7 +8,7 @@ jobs:
   assign:
     runs-on: ubuntu-latest
     steps:
-      - uses: hkusu/review-assign-action@v1
+      - uses: hkusu/review-assign-action@v1.3.0
         with:
           assignees: ${{ github.Vanomaster }}
           reviewers: ${{ github.Vanomaster }}
