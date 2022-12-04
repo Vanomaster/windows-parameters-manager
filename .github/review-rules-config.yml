@@ -4,10 +4,9 @@ reviewers:
  - Vanomaster
  
 addAssignees: true
-numberOfAssignees: 2
+numberOfAssignees: 1
 assignees:
  - Vanomaster
- - author
 
 skipKeywords:
   - wip
